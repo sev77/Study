@@ -3,14 +3,14 @@
 
 ### 模式
 
-* 全局function模式
-> 将方法定义到window下
-* namespace模式
-> 将方法定义到对象下
-* IIFE模式
-> 通过 立即执行函数 在开始的时候将方法绑定到window下，匿名函数自调用(闭包)
-* IIFE模式增强
-> 引入依赖
+> 全局function模式
+* 将方法定义到window下
+> namespace模式
+* 将方法定义到对象下
+> IIFE模式
+* 通过 立即执行函数 在开始的时候将方法绑定到window下，匿名函数自调用(闭包)
+> IIFE模式增强
+* 引入依赖
 
 # commonjs
 
