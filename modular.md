@@ -1,4 +1,8 @@
-@[ES6](#ES6)
+1. [modular](#modular)
+2. [commonjs](#commonjs)
+3. [AMD](#AMD)
+4. [CMD](#CMD)
+5. [ES6](#ES6)
 
 # modular
 
