@@ -171,19 +171,65 @@
 		版本号提升规则: 只要前边的版本号增长了,则后边的版本号归零
 		
 - 包管理配置文件:
-	npm规定,在项目根目录中,必须提供一个叫做package.json的包管理配置文件,用来记录与项目有关的一些配置信息
+	1. npm规定,在项目根目录中,必须提供一个叫做package.json的包管理配置文件,用来记录与项目有关的一些配置信息
 	
-	安装命令: npm init -y (只能在英文目录下运行成功,且不能包含空格)
+	2. 安装命令: npm init -y (只能在英文目录下运行成功,且不能包含空格)
+	 
+	3. dependencies 配置项会自动写入下载的依赖包
 	
-	dependencies 配置项会自动写入下载的依赖包
-
-	npm i ==> 从 dependencies 拿到所有的依赖信息, 下载当前项目用到的所有依赖包
+	4. npm i ==> 从 dependencies 拿到所有的依赖信息, 下载当前项目用到的所有依赖包
 	
-	npm uninstall 依赖名  ==> 卸载依赖包
+	5. npm uninstall 依赖名  ==> 卸载依赖包
 	
-	devDependencies 配置项只在开发阶段使用
-		简写:  npm i 依赖名 -D 
-		完整:  npm i 依赖名 --save-dev
+	6. devDependencies 配置项只在开发阶段使用
+		* 简写:  npm i 依赖名 -D 
+		* 完整:  npm i 依赖名 --save-dev
 		
+	7. * 查看当前的下载包的镜像源: npm config get registry
+	   * 将下载包的镜像源切换为淘宝镜像源: npm config set registry=https://registry.npm.taobao.org/
+	
+	8. 通过nrm工具,快速切换镜像源:
+	   * 安装: npm i nrm -g
+	   * 查看所有可用的镜像源: nrm ls
+	   * 将下载包的镜像源切换为淘宝镜像源: nrm use taobao
+	
+	9. 包的分类:
+	   * 项目包: node_modules中的包
+	   * 全局包: 安装的时候，运用了 -g 的命令(默认目录-C:\Users\用户目录\AppData\Roaming\npm\node_modules)
+
+	10. 小工具-i5ting_toc:
+	   * 可以把md文档转为html页面的小工具
+	   * 安装: npm i -g i5ting_toc
+	   * 使用: i5ting_toc -f 要转换的md文件路径 -o
+
+	11. 一个规范的包的组成结构:
+	   * 包必须以单独的目录而存在
+	   * 包的顶级目录下要包含 package.json 这个包管理配置文件
+	   * package.json 中必须包含 name version main 这三个属性,分别代表 包的名字 版本号 包的入口
+	   * [更多](https://yarnpkg.com/zh-Hans/docs/package-json)
+
+- 开发属于自己的包:
+	1. 新建文件夹作为包的根目录
+	2. 在文件夹中, 新建三个文件:
+		* package.json (包管理配置文件)
+		* index.js (包的入口文件)
+		* README.md (包的说明文档)
+	3. package.json
+
+		{
+		   "name": "",  (包的下载名称, 有唯一性, 去npm网站搜一下看看有没有被占用)
+		   "version": "1.0.0",  (包的版本号)
+		   "main": "index.js",  (包的入口文件)
+		   "description": "",  (包的简短描述信息)
+		   "keywords": [],  (搜索的关键字)
+		   "license": "ISC"  (包遵循的开源许可协议, npm默认是ISC, 更多[协议参考](https://www.jianshu.com/p/86251523e898))
+		}
+		
+	4. README.md
+	    以markdown方式编写:
+	    	* 安装方式
+	    	* 导入方式
+	    	* 功能以及调用示例
+	    	* 开源协议
 		
 
