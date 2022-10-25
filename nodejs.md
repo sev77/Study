@@ -174,4 +174,12 @@
 	npm规定,在项目根目录中,必须提供一个叫做package.json的包管理配置文件,用来记录与项目有关的一些配置信息
 	
 	安装命令: npm init -y (只能在英文目录下运行成功,且不能包含空格)
+	
+	dependencies 配置项会自动写入下载的依赖包
+
+	npm i ==> 从 dependencies 拿到所有的依赖信息, 下载当前项目用到的所有依赖包
+	
+	npm uninstall 依赖名  ==> 卸载依赖包
+	
+	devDependencies 配置项只在开发阶段使用
 
