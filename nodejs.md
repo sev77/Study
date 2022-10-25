@@ -182,4 +182,7 @@
 	npm uninstall 依赖名  ==> 卸载依赖包
 	
 	devDependencies 配置项只在开发阶段使用
+		简写:  npm i 依赖名 -D 
+		完整:  npm i 依赖名 --save-dev
+		
 
