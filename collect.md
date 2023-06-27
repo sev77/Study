@@ -10,6 +10,10 @@
 
 5. 查看依赖的所有版本: npm view 依赖名 versions
 
+6. [git小乌龟](https://tortoisegit.org/download/)
+
+7. [app版本更新逻辑](https://blog.csdn.net/shelter123456/article/details/126039009)
+
 
 ### webStorage:
 
